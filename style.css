@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    padding-left: 30px;
+}
+
+aside {
+    width: 100vh;
+    text-align: left;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+main {
+    width: 70vh;
+    text-align: left;
+}
