@@ -7,27 +7,22 @@
     <title>To Do List</title>
 </head>
 <body>
-    <aside>
+    <aside id="aside">
         <h1><u>To Do</u></h1>
         <div class="task">
-            <li>Here is a task</li>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-        </div>
-        <div class="task">
-            <li>Here is a task</li>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-        </div>
-        <div class="task">
-            <li>Here is a task</li>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+            <li id="taskText">Clean the dishes</li>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="x"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="check"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
         </div>
     </aside>
     <main>
-        <h2>what do you have to do?</h2>
-        <textarea name="newTask" id="newTask" cols="30" rows="10"></textarea>
+        <div class="mainTop">
+            <h2>what do you have to do?</h2>
+        </div>
+        <div class="mainBottom">
+            <textarea name="newTask" id="newTask" cols="30" rows="10"></textarea>
+            <button type="submit" id="submitButton">submit</button>
+        </div> 
     </main>
     <script src="main.js"></script>
 </body>

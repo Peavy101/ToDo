@@ -21,4 +21,21 @@ aside {
 main {
     width: 70vh;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.x:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.check:hover {
+    opacity: 50%;
+    cursor: pointer;
 }
