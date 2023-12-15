@@ -1,56 +1,38 @@
-const form = document.getElementById('newTask');
-const formButton = document.querySelector('#submitButton');
-var xButton = document.querySelectorAll('.x');
-var checkButton = document.querySelectorAll('.check');
+const createTaskButton = document.getElementById("createTask")
+const toDoList = document.getElementById("toDoList")
 
-formButton.addEventListener('click', function() {
-    const userInput = document.getElementById('newTask').value;
-    const aside = document.getElementById('aside');
-    console.log(userInput);
+createTaskButton.addEventListener('click', () => {
+  const taskName = document.getElementById("newTask").value;
+  const todo_id = Math.random(1000)/toString(36).substring(7);
+  document.getElementById('newTask').value=null;
 
-    var divElement = document.createElement('div');
-    divElement.classList.add('task');
+  console.log(taskName)
 
-    // Create the li element and set its text content
-    var liElement = document.createElement('li');
-    liElement.setAttribute('id', 'taskText');
-    liElement.textContent = userInput;
+  const toDoWrapper = document.createElement("div");
+  toDoWrapper.setAttribute('id', todo_id);
 
-    // Create the two SVG elements
-    var svg1 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg1.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    svg1.setAttribute('height', '24');
-    svg1.setAttribute('viewBox', '0 -960 960 960');
-    svg1.setAttribute('width', '24');
-    svg1.classList.add('x');
-    var path1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path1.setAttribute('d', 'm256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z');
-    svg1.appendChild(path1);
+  const listElement = document.createElement("li");
+  listElement.innerText = taskName;
 
-    var svg2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg2.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    svg2.setAttribute('height', '24');
-    svg2.setAttribute('viewBox', '0 -960 960 960');
-    svg2.setAttribute('width', '24');
-    svg2.classList.add('check');
-    var path2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path2.setAttribute('d', 'M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z');
-    svg2.appendChild(path2);
+  const checkButton = document.createElement("button");
+  checkButton.innerText = "complete";
+  checkButton.setAttribute('id', todo_id + "-check");
+  checkButton.addEventListener('click', () => {
+    if (toDoWrapper.style.textDecoration === "line-through") {
+      toDoWrapper.style.textDecoration = "none";
+    }
+    else toDoWrapper.style.textDecoration = "line-through";
+  })
 
-    // Append the elements to the div
-    divElement.appendChild(liElement);
-    divElement.appendChild(svg1);
-    divElement.appendChild(svg2);
-
-    // Append the created div to the body (or any other parent element)
-    aside.appendChild(divElement);
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "delete";
+  deleteButton.setAttribute('id', todo_id + "-delete")
+  deleteButton.addEventListener('click', () => {
+    toDoWrapper.remove();
+  })
+  
+  toDoWrapper.appendChild(listElement);
+  toDoWrapper.appendChild(checkButton);
+  toDoWrapper.appendChild(deleteButton);
+  toDoList.appendChild(toDoWrapper);
 })
-
-xButton.forEach(function(xButton) {
-    xButton.addEventListener('click', function() {
-      // Perform actions when the SVG element is clicked
-      // For example, you can change its color, hide/show it, or trigger any function
-      console.log('SVG element with class "mySVGClass" clicked!');
-      // Add your actions here
-    });
-  });
