@@ -1,14 +1,20 @@
 body {
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-left: 30px;
+    font-family: 'Tilt Warp', 'Rubik Scribble';
+    background-color: lightpink;
 }
 
 aside {
-    width: 100vh;
-    text-align: left;
+    text-align: center;
+    width: 400px;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 3px 2px 2px grey;
 }
 
 .task {
@@ -19,10 +25,11 @@ aside {
 }
 
 main {
-    width: 70vh;
     text-align: left;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainBottom {
@@ -41,7 +48,48 @@ main {
 }
 
 textarea {
-    width: 200px;
+    width: 250px;
     height: 50px;
     resize: none;
+    background-color: palevioletred;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    box-shadow: 3px 2px 2px grey;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+#NaN {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin: 15px;
+}
+
+li {
+    text-align: left;
+    padding: 20px;
+}
+
+.buttonDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+#createTask {
+    font-family: 'Tilt Warp', 'Rubik Scribble'; 
+    background-color: violet; 
+    border-radius: 15px; 
+    border: none;
+    margin: 5px;
+    box-shadow: 3px 2px 2px grey;
+}
+
+#createTask:hover {
+    opacity: 70%;
 }
