@@ -37,6 +37,18 @@ main {
     flex-direction: row;
 }
 
+#NaN-check {
+    border-radius: 10px;
+    background-color: lightgreen;
+    border: 1px solid black;
+}
+
+#NaN-delete {
+    border-radius: 10px;
+    background-color: orangered;
+    border: 1px solid black;
+}
+
 .x:hover {
     opacity: 50%;
     cursor: pointer;

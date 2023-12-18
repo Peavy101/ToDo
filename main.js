@@ -46,9 +46,11 @@ function createTask() {
   })
   
   const checkIcon = document.createElement("img");
+  checkIcon.setAttribute('class', "check");
   checkIcon.src = "check.svg";
 
   const deleteIcon = document.createElement("img");
+  deleteIcon.setAttribute('class', "x");
   deleteIcon.src = "x.svg";
 
   checkButton.appendChild(checkIcon);
