@@ -102,6 +102,19 @@ li {
     box-shadow: 3px 2px 2px grey;
 }
 
+#feelingLucky {
+    font-family: 'Tilt Warp', 'Rubik Scribble'; 
+    background-color: violet; 
+    border-radius: 15px; 
+    border: none;
+    margin: 5px;
+    box-shadow: 3px 2px 2px grey;
+}
+
 #createTask:hover {
+    opacity: 70%;
+}
+
+#feelingLucky:hover {
     opacity: 70%;
 }
